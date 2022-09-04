@@ -177,12 +177,33 @@ app.post('/addspace',isLoggedIn,async (req,res)=>{
   app.get("/post/:id",isLoggedIn,async (req,res)=>{
 	let post = await Post.findOne({_id:req.params.id});
 	//console.log(post)
-	res.render('post.ejs',{post:post});
+	res.render('post.ejs',{post:post, user: req.user});
 	
   })
-
-  app.post('/add-comment/:postid',isLoggedIn,async (req,res)=>{
-	let comment= {commentor: "Navya", content: req.body.comment}
+  app.post('/send-email', (req,res)=>{
+	const sgMail = require('@sendgrid/mail')
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  const msg = {
+    to: 'fun.crazy.joker@gmail.com', // Change to your recipient
+    from: 'navyasingla1309git@gmail.com', 
+	subject: 'Sending with SendGrid is Fun',
+	text: 'and easy to do anywhere, even with Node.js',
+	html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+	template_id: 'd-a92705d7ff424927b7fedd9aa6ce726b' 
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent')
+	  res.redirect('/mentors');
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+	
+  })
+  app.post('/add-comment/:postid/:username',isLoggedIn,async (req,res)=>{
+	let comment= {commentor: req.params.username, content: req.body.comment}
 	//await Post.findOneAndUpdate({id:req.params.postid},{$push:{comments: [comment]}});
 	let post = await Post.findById(req.params.postid);
 	post.comments.push(comment);

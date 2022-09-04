@@ -97,12 +97,14 @@
     <img src="<%=mentors[m].image%>" class="mentor-img"/>
     <p class="position"><b><%=mentors[m].position%>: <%=mentors[m].company%></b></p>
     <p><%=mentors[m].description%></p>
+    <form method="post" action="/send-email">
     <div class="main-button-gradient">
                      
-        <div><a href="#" >Connect!</a></div>
+        <div><button type="submit">Connect!</button></div>
        
         
     </div>
+</form>
 
     </div>
      <div class="mentor-grid">
