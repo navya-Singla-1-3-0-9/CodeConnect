@@ -1,4 +1,14 @@
 # Doyenne
+## SNAPSHOTS
+![home page](https://user-images.githubusercontent.com/90545403/188310518-a7aa3dcf-f6be-4f92-a6ee-14db5b1586ef.png)
+![blogs](https://user-images.githubusercontent.com/90545403/188310532-c405eae7-c590-4094-a93b-d677f5e04da7.png)
+![cs](https://user-images.githubusercontent.com/90545403/188310559-c1d762ae-bef8-4fb4-a044-ca98c9449ad1.png)
+![mentor](https://user-images.githubusercontent.com/90545403/188310567-d95e7e8c-5701-4bea-ab0e-1e70f72ee4d5.png)
+![comment](https://user-images.githubusercontent.com/90545403/188310580-04787882-f14e-4c33-a160-b461e7081643.png)
+![viz](https://user-images.githubusercontent.com/90545403/188310591-f204adfe-feb2-481d-b227-8e624a04b99f.png)
+![resources2](https://user-images.githubusercontent.com/90545403/188310606-97aa3137-0685-4904-92f3-f443dc5c2e13.png)
+
+
 ## Inspiration
 Tech is a vast industry. Professional connections are vital, and that's why women in tech need to have their groups in fields like IT or STEM. 
 
