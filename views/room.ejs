@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="/socket.io/socket.io.js"></script>
+	<script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.2/peerjs.min.js" integrity="sha512-4wTQ8feow93K3qVGVXUGLULDB9eAULiG+xdbaQH8tYZlXxYv9ij+evblXD0EOqmGWT8NBTd1vQGsURvrQzmKeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/editor-styles.css">
+    <link rel="stylesheet" href="/whiteboard/styles.css">
+    <link rel ="stylesheet" href="/css/styles.css">
+    <title>Coding Session</title>
+</head>
+<script>
+    const room_id= "<%=roomid%>";
+    const username = "<%=username%>";
+</script>
+<body>
+    
+        <div class="main_vid">
+            <div id="all-videos"></div>
+        </div>
+<div class="code_space">
+    
+    <canvas class="whiteboard" width="750px" height="650px" style="border:1px solid"></canvas>
+    
+    <div class="editor">
+        <div class="editor__wrapper">
+            <div class="editor__body">
+                <div id="editorCode" class="editor__code"></div>
+            </div>
+            <div class="editor__footer">
+                <div class="editor__footer--left">
+                    <button class="editor__btn editor__run">Run ></button>
+                    <button class="editor__btn editor__reset">Reset ></button>
+                </div>
+                <div class="editor__footer--right">
+                    <div class="editor__console">
+                        <ul class="editor__console-logs"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+   
+</div>
+<div class="controls">
+    <button class="eraser">
+        <i class="fas fa-eraser fa-4x"></i>
+    </button>
+    <button class="pen">
+        <i class="fas fa-pen fa-4x"></i>
+    </button>
+
+</div>
+
+  <!---- -->
+  <script src="https://kit.fontawesome.com/c8338092a9.js" crossorigin="anonymous"></script>
+  
+	<script src="/whiteboard/app.js"></script>
+    <script src="/src-min/ace.js"></script>
+    <script src="/src-min/mode-javascript.js"></script>
+    <script src="/src-min/ext-language_tools.js"></script>
+    <script src="/js/editor.js"></script>
+    <script src="/js/editor-console.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  
+	<script src='js/meetRoom/script.js'></script>
+ 
+</body>
+
+</html>

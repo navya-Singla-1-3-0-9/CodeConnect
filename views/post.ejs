@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="/css/post.css">
+  
+  </head>
+
+<body>
+    
+       <div style="height:100px;"></div>
+<div class="container mt-5 mb-5">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-5">
+            <img src="/images/post1.png">
+        </div>
+        <div class="col-md-7">
+            <div class="question-card">
+            <div class="question"><%=post.question%>?</div>
+            </div>
+            <div class="card">
+                <div class="p-3">
+
+                    <form method="post" action="/add-comment/<%=post.id%>">
+                    <div class="mt-3 d-flex flex-row align-items-center p-3 form-color"> <img src="https://cdn2.vectorstock.com/i/1000x1000/02/71/profile-placeholder-default-avatar-girl-vector-23890271.jpg" width="50" class="rounded-circle mr-2"> <input type="text" class="form-control" placeholder="Enter your comment..." name ="comment"> </div>
+                    <button class="btn btn-success" type="submit">Add Comment</button>
+                    </form>
+                    <h6>Comments</h6>
+                </div>
+                <%for(let comment of post.comments){%>
+               
+                <div class="mt-2">
+                    <div class="d-flex flex-row p-3"> <img src="https://cdn2.vectorstock.com/i/1000x1000/02/71/profile-placeholder-default-avatar-girl-vector-23890271.jpg" width="40" height="40" class="rounded-circle mr-3">
+                        <div class="w-100">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex flex-row align-items-center"> <span class="mr-2"><%=comment.commentor%></span> <small class="c-badge">Top Comment</small> </div> <small>12h ago</small>
+                            </div>
+                            <p class="text-justify comment-text mb-0"><%=comment.content%></p>
+                            <div class="d-flex flex-row user-feed"> <span class="wish"><i class="fa fa-heartbeat mr-2"></i>24</span> </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+        <script src="/js/post.js"></script>
+       
+  </body>
+</html>

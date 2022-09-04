@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+   <%-include('header.ejs')%>
+   <link rel="stylesheet" href="/css/space-pg.css">
+
+  </head>
+
+<body>
+    <%-include('navbar.ejs')%>
+    <div style="height:100px;"></div>
+    <div>
+        <div class="post" >
+          
+            <div class="row nextrow">
+                <div class="col-lg-12 post">
+              <div class="post-header"style="background:url('<%=space.image%>')">
+                        <i><%=space.name%></i>
+                        <div class="space-desc">
+                            <i>
+                            <%=space.content%>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="space-posts">
+                        <a href="/createpost/<%=space.id%>"><button class="btn btn-light rounded-pill" style="margin-bottom:30px">Create Post</button></a>
+                       <br/>
+                        <%for(let post of posts){%>
+                       
+                         <div class="single-post">
+                          
+                            <div class="card">
+                                <div class="card-header">
+                                   <%=post.comments.length%> Comments
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: black;"><%=post.creator%></h5>
+                                    <p class="card-text"><%=post.question%></p>
+                                    <a href="/post/<%=post.id%>" class="btn btn-dark">Explore post</a>
+                                </div>
+                            </div>
+
+                      
+                    </div>
+                    <%}%>
+                   
+                    </div>
+                    
+
+                </div>
+             
+
+            </div>
+        </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+      <%-include('footer.ejs')%>
+  </body>
+</html>

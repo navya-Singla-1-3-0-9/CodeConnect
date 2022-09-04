@@ -1,0 +1,100 @@
+
+body{
+    color: white;
+}
+.post{
+  
+   
+    padding-top: 15vh;
+}
+.nextrow{
+    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%) !important;
+    width:80%;
+    min-height: 100vh;
+    margin-left: 10%;
+    padding:20px;
+  
+}
+.share{
+    background-color: black;
+    border-radius: 5px;
+    padding:10px;
+}
+.btn-secondary{
+    background-color:#2c303a;
+    border:1px solid black;
+    font-size: 15px;
+}
+.btn-group{
+    margin-left:30px;
+}
+.btn-secondary:hover{
+    font-size:15px;
+}
+p{
+    color:lightslategrey;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.info{
+    margin-bottom: 30px;
+}
+.col-lg-4 .card{
+    color: white;
+	background-color: black;
+}
+a{
+    margin-top:20px;
+}
+.views{
+    margin-top: 30px;
+}
+.post{
+  
+    padding-top:0;
+}
+.post-header{
+    background-image: url('https://o.remove.bg/downloads/3d87393e-4a47-419b-a7d7-41ef5d7d61bc/43_w1200-removebg-preview.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: black;
+    color: white;
+    font-size:60px;
+    font-weight: 600;
+    height:400px;
+}
+.space-desc{
+    font-size:15px;
+}
+.space-posts{
+    margin-top:40px;
+}
+.space-posts .card-header{
+    color:black
+}
+.space-posts .card{
+    margin-bottom: 30px;
+}
+.post-header .btn-light{
+    color:black;
+    margin-top:20%;
+    font-size: 20px;
+    margin-left:250px;
+}
+.btn-light:hover{
+    font-size:15px;
+}
+.btn-light{
+    font-size: 15px;
+}
+.post-header .btn-light a:link{
+    color:black;
+}
+@media(max-width:600px){
+    .post-header .btn-light{
+        margin-top:10%;
+        margin-left:20px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blogs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+
+   <link rel="stylesheet" href="/css/resource.css">
+
+  </head>
+
+<body>
+ 
+    <main>
+
+<center>
+    <header> 
+      <h1>Deep Dive Into HTML!</h1>
+    </header>
+   <main>
+     <aside><br>
+
+       <br>
+       <div class="summarymenu">
+   <details>
+   <summary class="headline">Building Blocks of HTML</summary>
+   <div class="content">
+    <a href="#">Headings</a><br>
+    <a href="#">Divs and Spans</a><br>
+   <a href="#">Links</a><br>
+   <a href="#">Images</a><br>
+   </div>
+   </div>
+   <div class="summarymenu">
+   <details>
+   <summary class="headline">SVG Elements in HTML</summary>
+   <div class="content">
+   <a href="#">Shapes</a><br>
+   <a href="#">Other elements</a><br>
+   <a href="#">Customising SVG Components</a><br>
+   </div>
+   </div>
+   <div class="summarymenu">
+   <details>
+   <summary class="headline">Video Resources</summary>
+   <div class="content">
+   <a href="#">HTML - Beginners guide</a><br>
+   <a href="#">Intoduction to HTML by FreeCodeCamp</a><br>
+   </div>
+   </div>
+    <div class="sponsordiv">
+      
+      <iframe width="190" height="155" src="https://www.youtube.com/embed/qz0aGYrrlhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <iframe width="190" height="155"
+      src="https://www.youtube.com/embed/kLO4X_3VYdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+     </aside>
+     <section>
+       Main section with articles' previews
+       <article style="height: 100vh;">
+         <div class="articleimg" style="height: 60vh; margin-top: 20vh;">
+           <img src="https://media.istockphoto.com/vectors/digital-java-code-text-computer-software-coding-vector-concept-vector-id1140434335?b=1&k=20&m=1140434335&s=612x612&w=0&h=APJztkl2KJtqXXlAX2A82PrfcMB4JBuoFh89SSBX-2I=">
+           
+         </div>
+         <div class="articletxt">
+           <h2>Why HTML?</h2>
+           <p>First developed by Tim Berners-Lee in 1990, HTML is short for Hypertext Markup Language. HTML is used to create electronic documents (called pages) that are displayed on the World Wide Web. Each page contains several connections to other pages called hyperlinks. Every web page you see was written using one version of HTML.
+
+            HTML code ensures the proper formatting of text and images for your Internet browser. Without HTML, a browser would not know how to display text as elements or load images or other elements. HTML also provides a basic structure of the page, upon which Cascading Style Sheets are overlaid to change its appearance. One could think of HTML as the bones (structure) of a web page, and CSS as its skin (appearance).
+        <br/>
+        <br/>
+        Most HTML tags have an opening tag containing the tag name, tag attributes, a closing tag containing a forward slash, and the tag name being closed. For tags that do not have a closing tag like <img>, it is best practice to end the tag with a forward slash.
+
+Most tags are contained in a less than and greater than angle brackets, and everything between the open and close tag is displayed or affected by the tag. In the example above, the <a> tag is creating a link called "Computer Hope" that is pointing to the hope.html file.
+    </p>
+
+           
+         </div>
+         
+       </article>
+      
+       
+       
+     </section>
+   </main>
+   <footer>
+    
+   </footer>
+   </center>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+      <%-include('footer.ejs')%>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<%-include('header.ejs')%>
+
+   <link rel="stylesheet" href="/css/mentors.css">
+
+  </head>
+
+<body>
+    <%-include('navbar.ejs')%>
+    <main>
+
+      <%const mentors = [{
+        category:"Development and Testing",
+        name:"Sarah Clarke",
+        image:"https://media.istockphoto.com/photos/portrait-of-smiling-mixed-race-woman-looking-at-camera-picture-id1319763830?k=20&m=1319763830&s=170667a&w=0&h=yfUabFHLHHaKZPevqIOSZ478NxjBiMTjgo2H52cqA1A=",
+        position:"Senior Software Engineer",
+        company:"Adobe",
+        education:"Founder, Codess.Cafe",
+        description: "I am here to mentor about efficient use of latest technologies for testing!"
+    },
+    {
+        category:"Analysis",
+        name:"Jenna Morris",
+        image:"https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        position:"Research Analyst",
+        company:"Frolic",
+        description:"Founder, SmartSystems"
+    },
+    {
+        category:"App Development",
+        name:"Sally Johnson",
+        image:"https://img.freepik.com/free-photo/friendly-smiling-woman-looking-pleased-front_176420-20779.jpg",
+        position:"Member Of Technical Staff - 3",
+        company:"SalesForce",
+        description:"I am here to help young girls explore more about apps for industry."
+    },
+    {
+        category:"Machine Learning and Data Science",
+        name:"Maria Sinclair",
+        image:"https://media.istockphoto.com/photos/happy-black-woman-thinking-picture-id1141391841?k=20&m=1141391841&s=170667a&w=0&h=2FXV3Xo9_arg3sr1WFPslvpYHEXQSPQgFY60S6Kf9Vw=",
+        position:"Machine Learning Engineer",
+        company:"Apple",
+        description:"Can give guidance for breaking into the world of Machine Learning."
+    },
+    {
+        category:"Databases",
+        name:"Miley Hopper",
+        image:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW58ZW58MHx8MHx8&w=1000&q=80",
+        position:"Database Expert",
+        company:"New Era technologies",
+        description:"Connect with me to know more about how I started out as a database Expert!"
+    }]%>
+      <div class="main">
+        <h1 class="text-center">Mentors</h1>
+        <div id = "bb"></div>
+         <div class="top-img">
+             <img
+                 src="/assets/images/mentor.png"
+                 style = "height:400px;
+                 width: 650px;"
+             />
+         </div>
+         <div class="spinner">
+             <div class="bounce1"></div>
+             <div class="bounce2"></div>
+             <div class="bounce3"></div>
+         </div>
+     </div>
+     <div class="matched">
+     <div class="main-button-gradient">
+                     
+        <div><a href="#" class="match">Match me to a mentor now!</a></div>
+       
+        
+    </div>
+</div>
+<script>
+    
+    document.querySelector(".match").addEventListener("click", ()=>{
+       let c =  document.querySelector("#matched-mentor")
+       console.log(c.classList);
+       c.classList.toggle("hide")
+       console.log(c.classList);
+    })
+    
+</script>
+<%const m =Math.floor(Math.random()*2)%> 
+<div class="mentor-container hide" id = "matched-mentor">
+    <h4><%=mentors[m].name%></h4>
+    <img src="<%=mentors[m].image%>" class="mentor-img"/>
+    <p class="position"><b><%=mentors[m].position%>: <%=mentors[m].company%></b></p>
+    <p><%=mentors[m].description%></p>
+    <div class="main-button-gradient">
+                     
+        <div><a href="#" >Connect!</a></div>
+       
+        
+    </div>
+
+    </div>
+     <div class="mentor-grid">
+      <%for(let mentor of mentors){%>
+        <div class="mentor-container">
+            <h4><%=mentor.name%></h4>
+            <img src="<%=mentor.image%>" class="mentor-img"/>
+            <p class="position"><b><%=mentor.position%>: <%=mentor.company%></b></p>
+            <p><%=mentor.description%></p>
+            </div>
+           
+        <%}%>
+        </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+      <%-include('footer.ejs')%>
+  </body>
+</html>
