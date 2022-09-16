@@ -8,14 +8,6 @@ const grid=document.getElementById('all-videos');
 const viewVideo= document.createElement('video');
 let myuserid;
 
-
-/*document.querySelector('.end-call').addEventListener('click',()=>{
-  window.location.href ='/';
-});
-*/
-
-
-
 let mypeer= new Peer(undefined,{
 	path: '/peerjs',
 	host:'/',
@@ -30,7 +22,6 @@ viewVideo.muted= true;
 navigator.mediaDevices.getUserMedia({
 	video: true,
 	audio: true
-
   
 })
 .then(stream=>{
@@ -77,31 +68,6 @@ function addVideoStream(video, stream) {
 }
 
 
-
-
-
-/*let messages = document.querySelector(".messages");
-let text = $("input");
-  // when press enter send message
-  $('html').keydown(function (e) {
-    if (e.which == 13 && text.val().length !== 0) {
-      socket.emit('message', text.val());
-      text.val('')
-    }
-  });
-  socket.on("createMessage", (message, userName) => {
-  messages.innerHTML =
-    messages.innerHTML +
-    `<li class="message ${
-          userName == username ? 'me' : 'other'
-        }">
-       <div><b> ${
-          userName == username ? "me" : userName
-        } </b></div>
-        <span>${message}</span>
-    </li>`;
-});
-*/
 socket.on('user-disconnected', userId => {
   if (peers[userId]) peers[userId].close()
 })

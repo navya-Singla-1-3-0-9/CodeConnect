@@ -1,9 +1,8 @@
 
+// initializes socket connection at current path.
 const socket = io("/");
 let canvas= document.querySelector(".whiteboard");
 let context= canvas.getContext("2d");
-//canvas.width= window.innerWidth;
-//canvas.height= window.innerHeight;
 
 let drawing = false;
 let current={

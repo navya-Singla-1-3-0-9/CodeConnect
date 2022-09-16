@@ -12,7 +12,6 @@ let defaultCode = 'console.log("Hello World!")';
 let editorLib = {
     init() {
         // Configure Ace
-
         // Theme
         codeEditor.setTheme("ace/theme/dracula");
 
@@ -20,8 +19,7 @@ let editorLib = {
         codeEditor.session.setMode("ace/mode/javascript");
 
         // Set Options
-        codeEditor.setOptions({
-           
+        codeEditor.setOptions({   
             fontSize: '12pt',
             enableBasicAutocompletion: true,
             enableLiveAutocompletion: true,
@@ -36,7 +34,6 @@ let editorLib = {
 executeCodeBtn.addEventListener('click', () => {
     // Get input from the code editor
     const userCode = codeEditor.getValue();
-    
 
     // Run the user code
     try {
