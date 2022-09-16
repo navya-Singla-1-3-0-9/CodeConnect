@@ -46,22 +46,17 @@ In the world of technology, every day there are new Advancements. Tech blogs aim
 #### Find your mentor
 
 A mentor or a role model is vital to guide and help in exploration.
-Interact and collaborate with successful women in technology, seek guidance from them, learn through their experience and discover your career mentors which are matched automatically based on the user's profile through **our Natural-Language-processing** based model! Utilizing the user's information, the matching algorithm searches for other profiles of mentors with similar interests. In essence, we developed a similarity rating that recommended profiles based on many factors.  We developed user biographies as a test set of data for our algorithm. We used Sklearn for natural language processing and generated predictions based on how suitable a mentor is for the user.
-
+Interact and collaborate with successful women in technology, seek guidance from them, learn through their experience and discover your career mentors.
 #### Curated Resources
 Resources section contains resources, both articles and videos, to help beginner in starting their programming journey!
 
-## Use of Twilio
-Once, a mentee clicks connect to connect with the matched mentor, following email is sent through Twilio sendgrid to the mentor :
-![Twilio Email](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/210/273/datas/gallery.jpg)
 ## How we built it
 
 This Web-app is built with Node.js as the Backend and MongoDB Atlas as a database. WEB-RTC is obtained by using peer.js and socket.io. Google search results API has been used for getting tech blogs.
-Python and its libraries Scikit Learn and NLTK have been used to match mentors to mentees.
 
 ## Challenges we ran into
-Initially, We did not know how to create a peer-to-peer connection for video conferences. However, this project enabled us discover WEB-RTC technologies, and apply them to the project. We ran into a lot of challenges, but I was able to overcome them and produce a working prototype. We were also new to web sockets and learned a lot about them.
-Also, it was difficult to serve the NLP model for mentor matching with the front end, which we were able to overcome by serving the model as an API. Also, we were not very well-versed with the sci-kit-learn library, and this project enabled us to learn more about it.
+Initially, We did not know how to create a peer-to-peer connection for video conferences. However, this project enabled us discover WEB-RTC technologies, and apply them to the project. We ran into a lot of challenges, but we were able to overcome them and produce a working prototype. We were also new to web sockets and learned a lot about them.
+
 
 ## Accomplishments that we're proud of
 I am proud of creating a website that may help to increase the representation of women in technology, provide them with a peer group, and give them more confidence to become leaders in technology!
