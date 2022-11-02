@@ -8,7 +8,7 @@
 ![viz](https://user-images.githubusercontent.com/90545403/188310591-f204adfe-feb2-481d-b227-8e624a04b99f.png)
 ![resources2](https://user-images.githubusercontent.com/90545403/188310606-97aa3137-0685-4904-92f3-f443dc5c2e13.png)
 
-## Running the code
+## Getting Started
 - Fork or clone the repository into local system using:
 ```
 $git clone https://github.com/navya-Singla-1-3-0-9/Doyenne
