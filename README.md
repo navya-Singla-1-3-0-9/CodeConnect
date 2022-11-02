@@ -10,17 +10,18 @@
 
 ## Running the code
 - Fork or clone the repository into local system using:
-'''
+```
 $git clone https://github.com/navya-Singla-1-3-0-9/Doyenne
-'''
+```
 - Install packages:
-'''
+```
 $npm install
-'''
+```
 - Start the server:
-'''
+```
 node index.js
-'''
+```
+Project will be running on port 5000.
 
 ## Inspiration
 Tech is a vast industry. Professional connections are vital, and that's why women in tech need to have their groups in fields like IT or STEM. 
