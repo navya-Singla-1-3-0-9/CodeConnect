@@ -23,6 +23,10 @@ app.use('/peerjs',peerServer);
 const path = require('path')
 app.use(express.static("public"));
 
+// Import models
+const  User = require("./models/user");
+const  Space = require("./models/space");
+const  Post = require("./models/post");
 //Create Session
 const sessionConfig={
 	secret: 'Thisisasecret',
@@ -60,10 +64,6 @@ const  connect  =  mongoose.connect(url, { useNewUrlParser: true  });
 app.use(express.urlencoded({extended:true}));
 app.set('views',path.join(__dirname,'views'));
 
-// Import models
-const  User = require("./models/user");
-const  Space = require("./models/space");
-const  Post = require("./models/post");
 /*
 ###################  SOCKET EVENTS  #################################################
 */
