@@ -1,4 +1,4 @@
-# Doyenne
+# CodeConnect
 ## SNAPSHOTS
 ![home page](https://user-images.githubusercontent.com/90545403/188310518-a7aa3dcf-f6be-4f92-a6ee-14db5b1586ef.png)
 ![blogs](https://user-images.githubusercontent.com/90545403/188310532-c405eae7-c590-4094-a93b-d677f5e04da7.png)
